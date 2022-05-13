@@ -24,7 +24,7 @@ variable "services" {
 variable "tenant_name" {
   description = "The name of the tenant"
   type        = string
-  default     = "frontend-terraform-sync"
+  default     = "production-env"
 }
 
 variable "pool_name" {
@@ -36,7 +36,7 @@ variable "pool_name" {
 variable "tag_name" {
   description = "The name of the tag to create and use for dynamic address group filtering of Consul service IPs"
   type        = string
-  default     = "frontend-terraform-sync"
+  default     = "production-env"
 }
 
 variable "as3template_path" {
@@ -49,12 +49,4 @@ variable "consul_service_tags" {
   description = "Adminstrative tags to add to Consul service address objects. These are existing tags on BIG-IP."
   type        = list(string)
   default     = []
-}
-
-
-variable login_approle_role_id {
-  default     = "ab041c65-c8b0-5e20-da6a-2174f7048380"
-}
-variable login_approle_secret_id {
-  default   = "1279fe77-0706-2dc8-26a3-5e11e72d054b"
 }
